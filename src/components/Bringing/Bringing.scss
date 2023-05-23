@@ -1,0 +1,30 @@
+.bringing {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 200px;
+
+  &__title {
+    max-width: 390px;
+    margin: 0 0 34px;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 44px;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+
+    span {
+      color: $color-mark;
+    }
+  }
+
+  &__text {
+    max-width: 450px;
+    margin: 0;
+    font-size: 15px;
+    line-height: 25px;
+    color: #7d7d7d;
+  }
+}

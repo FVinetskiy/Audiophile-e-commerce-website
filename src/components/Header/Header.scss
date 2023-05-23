@@ -1,0 +1,54 @@
+.header {
+  background: $dark;
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 36px 0;
+  }
+
+  &__basket {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    color: $white;
+    background: transparent;
+    border: 0;
+
+    svg {
+      transition: $transition;
+    }
+
+    &:hover {
+      color: $color-mark;
+    }
+  }
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  margin: 0 90px 0 0;
+  padding: 0;
+
+  &__item {
+    margin: 0 16px;
+
+    a {
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 25px;
+      color: $white;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      transition: $transition;
+
+      &:hover {
+        color: $color-mark;
+      }
+    }
+  }
+}

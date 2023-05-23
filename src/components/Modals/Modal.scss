@@ -1,0 +1,31 @@
+.modal {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(0 0 0 / 40%);
+
+  &__content {
+    width: min-content;
+    height: min-content;
+    margin: 0 16px;
+    padding: 32px;
+    background: $white;
+    border-radius: 8px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    max-width: 1150px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 115px 20px 0 0;
+  }
+}

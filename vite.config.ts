@@ -13,4 +13,15 @@ export default defineConfig({
       typescript: true,
     }),
   ],
+  css: {
+    postcss: null,
+    preprocessorOptions: {
+        scss: {
+          additionalData: `
+            @import '/src/style/variables.scss';
+          `
+        },
+    },
+},
 })
+
