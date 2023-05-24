@@ -40,7 +40,7 @@ const Header: FC = () => {
     <>
       <header className='header'>
         <div className='container'>
-          <div className='header__content'>
+          <div className={'header__content'}>
             <Logo />
             <nav>
               <ul className='navigation'>

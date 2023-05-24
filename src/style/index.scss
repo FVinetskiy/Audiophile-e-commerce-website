@@ -26,9 +26,50 @@ button {
 }
 
 .container {
-  display: flex;
   width: 100%;
   max-width: 1150px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: min-content;
+  padding: 17px 31px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 14px;
+  color: $white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  background: $color-mark;
+  border: 0;
+  transition: $transition;
+
+  &:hover {
+    background: $mark-hover;
+  }
+
+  &--dark {
+    background: #000;
+
+    &:hover {
+      background: #4c4c4c;
+    }
+  }
+
+  &--transparent {
+    color: #000;
+    background: transparent;
+    border: 1px solid #000;
+
+    &:hover {
+      color: #fff;
+      background: #000;
+      border: 1px solid #000;
+    }
+  }
 }

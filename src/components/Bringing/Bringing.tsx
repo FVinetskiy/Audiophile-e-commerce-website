@@ -17,7 +17,7 @@ const Bringing: FC = () => {
           best place to buy your portable audio equipment.
         </p>
       </div>
-      <img src='../../../public/images/Bitmap.jpg' alt='man in headphones' />
+      <img src='/images/Bitmap.jpg' alt='man in headphones' />
     </div>
   )
 }

@@ -31,7 +31,7 @@ const BasketContent = () => {
       </div>
       <ul className='product-list'>
         {arr.map((product: product) => (
-          <li className='product-list__item'>
+          <li key={product.id} className='product-list__item'>
             <div key={product.id} className='product'>
               <div className='product__wrap-img'>
                 <img src={product.src} alt={product.name} />
