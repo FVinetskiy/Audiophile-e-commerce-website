@@ -14,7 +14,7 @@ const MainBanner: FC = () => {
               Experience natural, lifelike audio and exceptional build quality
               made for the passionate music enthusiast.
             </p>
-            <Link className='button' to={'/product/1'}>
+            <Link className='button' to={'/product/4'}>
               See Product
             </Link>
           </div>

@@ -3,7 +3,7 @@ import Bringing from '../../components/Bringing/Bringing'
 import Category from '../../components/Category/Category'
 import {Link, useLocation} from 'react-router-dom'
 import {useEffect} from 'react'
-import {fetchProduct, selectCategory} from '../../redux/slices/caregory'
+import {fetchCategory, selectCategory} from '../../redux/slices/category'
 import {useAppDispatch} from '../../redux/store'
 import {useSelector} from 'react-redux'
 
@@ -14,14 +14,8 @@ const CategoryPage = () => {
   const category = location.pathname.replace('/', '')
 
   const getCategory = async () => {
-    dispatch(fetchProduct({category}))
+    dispatch(fetchCategory({category}))
   }
-
-//   const reverseCategories = [...categories]
-//   reverseCategorie.reverse()
-
-//   console.log('categories', categories)
-//   console.log('ass', ass)
 
   useEffect(() => {
     getCategory()

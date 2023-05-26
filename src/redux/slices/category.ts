@@ -16,7 +16,7 @@ export type SearchProductParams = {
   category: string;
 }
 
-export const fetchProduct = createAsyncThunk<TypeCategory[], SearchProductParams>(
+export const fetchCategory = createAsyncThunk<TypeCategory[], SearchProductParams>(
   'app/fetchCategory',
   async (params) => {
     const { category } = params;
@@ -39,19 +39,19 @@ const initialState : ProductState = {
 };
 
 export const categorySlice = createSlice({
-  name: 'product',
+  name: 'category',
   initialState,
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(fetchProduct.pending, (state ) => { 
+    builder.addCase(fetchCategory.pending, (state ) => { 
       state.status = 'loading';
       state.categories = [];
     })
-    builder.addCase(fetchProduct.fulfilled, (state , action) => { 
+    builder.addCase(fetchCategory.fulfilled, (state , action) => { 
       state.status = 'success';
       state.categories = action.payload;
     })
-    builder.addCase(fetchProduct.rejected, (state ) => { 
+    builder.addCase(fetchCategory.rejected, (state ) => { 
       state.categories = [];
       state.status = 'error';
     })

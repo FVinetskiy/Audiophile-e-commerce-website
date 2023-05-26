@@ -7,12 +7,14 @@ const MainProduct = () => {
       <div className='main-products__item main-products__item--1'>
         <img className='main-products__img1' src='/images/1.png' alt='column' />
         <div className='main-products__text-content'>
-          <p className='main-products__title main-products__title--main'>ZX9 SPEAKER</p>
+          <p className='main-products__title main-products__title--main'>
+            ZX9 SPEAKER
+          </p>
           <p className='main-products__description'>
             Upgrade to premium speakers that are phenomenally built to deliver
             truly remarkable sound.
           </p>
-          <Link className='button button--dark' to={'/sssss'}>
+          <Link className='button button--dark' to={'/product/6'}>
             See Product
           </Link>
         </div>
@@ -20,7 +22,7 @@ const MainProduct = () => {
       <div className='main-products__item main-products__item--2'>
         <div className='main-products__text-content'>
           <p className='main-products__title'>ZX7 SPEAKER</p>
-          <Link className='button button--transparent' to={'/sssss'}>
+          <Link className='button button--transparent' to={'/product/5'}>
             See Product
           </Link>
         </div>
@@ -36,7 +38,7 @@ const MainProduct = () => {
       <div className='main-products__item main-products__item--4'>
         <div className='main-products__text-content'>
           <p className='main-products__title'>YX1 EARPHONES</p>
-          <Link className='button button--transparent' to={'/sssss'}>
+          <Link className='button button--transparent' to={'/product/1'}>
             See Product
           </Link>
         </div>
