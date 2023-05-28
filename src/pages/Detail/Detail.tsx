@@ -26,7 +26,7 @@ const Detail: FC = () => {
     <main>
       <div className='container'>
         <div className='detail'>
-          <button onClick={() => navigate(-1)} className='detail__back'>
+          <button onClick={() => navigate(-1)} className='back'>
             Go Back
           </button>
           <div className='piece'>

@@ -44,25 +44,6 @@
     color: #000;
     text-transform: uppercase;
   }
-
-  &__checkout {
-    width: 100%;
-    padding: 12px 0;
-    font-size: 13px;
-    font-weight: 700;
-    line-height: 14px;
-    color: $white;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    background: $color-mark;
-    border: 0;
-    transition: $transition;
-
-    &:hover {
-      background: $mark-hover;
-    }
-  }
 }
 
 .product {

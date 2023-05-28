@@ -18,13 +18,13 @@ const Footer: FC = () => {
                 <Link to={'/'}>Home</Link>
               </li>
               <li className='footer-navigation__item'>
-                <Link to={'/'}>HEADPHONES</Link>
+                <Link to={'/headphones'}>HEADPHONES</Link>
               </li>
               <li className='footer-navigation__item'>
-                <Link to={'/'}>SPEAKERS</Link>
+                <Link to={'/speakers'}>SPEAKERS</Link>
               </li>
               <li className='footer-navigation__item'>
-                <Link to={'/'}>EARPHONES</Link>
+                <Link to={'/earphones'}>EARPHONES</Link>
               </li>
             </ul>
           </div>

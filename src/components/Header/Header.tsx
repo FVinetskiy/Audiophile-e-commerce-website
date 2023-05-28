@@ -1,10 +1,13 @@
-import {FC, useState} from 'react'
+import {FC} from 'react'
 import {Logo} from '../icons/Logo'
 import {Basket} from '../icons/Basket'
 import {Link} from 'react-router-dom'
 import './Header.scss'
 import Modal from '../Modals/Modal'
 import BasketContent from '../BasketContent/BasketContent'
+import {useAppDispatch} from '../../redux/store'
+import {useSelector} from 'react-redux'
+import {ModalStatus, reverseBool} from '../../redux/slices/modal'
 
 const navigation = [
   {
@@ -30,10 +33,14 @@ const navigation = [
 ]
 
 const Header: FC = () => {
-  const [BasketActive, setBasketActive] = useState(false)
+  const {active} = useSelector(ModalStatus)
+  const dispatch = useAppDispatch()
 
   const openModal = () => {
-    setBasketActive(!BasketActive)
+    dispatch(reverseBool(true))
+  }
+  const closeModal = () => {
+    dispatch(reverseBool(false))
   }
 
   return (
@@ -58,7 +65,7 @@ const Header: FC = () => {
         </div>
       </header>
 
-      <Modal active={BasketActive} setActive={setBasketActive}>
+      <Modal active={active} setActive={closeModal}>
         <BasketContent />
       </Modal>
     </>
