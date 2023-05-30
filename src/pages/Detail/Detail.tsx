@@ -6,16 +6,36 @@ import {Link, useNavigate, useParams} from 'react-router-dom'
 import {useAppDispatch} from '../../redux/store'
 import {useSelector} from 'react-redux'
 import {fetchProduct, selectProduct} from '../../redux/slices/detailProduct'
+import {addItem, decItem, stateCart} from '../../redux/slices/cart'
 
 const Detail: FC = () => {
   const {product} = useSelector(selectProduct)
+  const {items} = useSelector(stateCart)
   const galleryObj = product.gallery
   const dispatch = useAppDispatch()
   const navigate = useNavigate()
   const {id} = useParams()
 
+  const currenCountItem = items?.find((i: any) => i.id === Number(product.id))
+  const countItemProduct = currenCountItem ? currenCountItem?.count : 0
+
   const getProduct = async () => {
     dispatch(fetchProduct({id}))
+  }
+
+  const addToCart = () => {
+    const currentCartItem: any = {
+      id: product.id,
+      src: product.image?.desktop,
+      name: product.name,
+      price: product.price,
+      count: 0,
+    }
+    dispatch(addItem(currentCartItem))
+  }
+
+  const dec = () => {
+    dispatch(decItem(product.id))
   }
 
   useEffect(() => {
@@ -44,11 +64,20 @@ const Detail: FC = () => {
               <p className='piece__price'>{`$ ${product.price}`}</p>
               <div className='piece__wrapper'>
                 <div className='counter'>
-                  <button className='counter__button'>-</button>
-                  <p className='counter__count'>1</p>
-                  <button className='counter__button'>+</button>
+                  <button
+                    disabled={countItemProduct === 0}
+                    onClick={dec}
+                    className='counter__button'>
+                    -
+                  </button>
+                  <p className='counter__count'>{countItemProduct}</p>
+                  <button onClick={addToCart} className='counter__button'>
+                    +
+                  </button>
                 </div>
-                <button className='button'>ADD TO CART</button>
+                <button onClick={addToCart} className='button'>
+                  ADD TO CART
+                </button>
               </div>
             </div>
           </div>

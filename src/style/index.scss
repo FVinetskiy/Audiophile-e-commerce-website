@@ -110,6 +110,11 @@ input::placeholder {
   border: 0;
   transition: $transition;
 
+  &.disabled {
+    cursor: no-drop;
+    background: #bdb9b9 !important;
+  }
+
   &:disabled {
     cursor: no-drop;
     background: #bdb9b9;
